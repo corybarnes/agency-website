@@ -1,0 +1,250 @@
+/* ============================================
+   Cruxy — one-page landing site
+   ============================================ */
+
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:400; font-display:swap; src:url("../fonts/poppins-400-devanagari.woff2") format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:400; font-display:swap; src:url("../fonts/poppins-400-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:400; font-display:swap; src:url("../fonts/poppins-400-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:500; font-display:swap; src:url("../fonts/poppins-500-devanagari.woff2") format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:500; font-display:swap; src:url("../fonts/poppins-500-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:500; font-display:swap; src:url("../fonts/poppins-500-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:600; font-display:swap; src:url("../fonts/poppins-600-devanagari.woff2") format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:600; font-display:swap; src:url("../fonts/poppins-600-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:600; font-display:swap; src:url("../fonts/poppins-600-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:700; font-display:swap; src:url("../fonts/poppins-700-devanagari.woff2") format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:700; font-display:swap; src:url("../fonts/poppins-700-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:700; font-display:swap; src:url("../fonts/poppins-700-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:800; font-display:swap; src:url("../fonts/poppins-800-devanagari.woff2") format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:800; font-display:swap; src:url("../fonts/poppins-800-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:800; font-display:swap; src:url("../fonts/poppins-800-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:900; font-display:swap; src:url("../fonts/poppins-900-devanagari.woff2") format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:900; font-display:swap; src:url("../fonts/poppins-900-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:900; font-display:swap; src:url("../fonts/poppins-900-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; color: #0D0D0D; background: #F8F8F8; overflow-x: clip; min-height: 100vh; display: flex; flex-direction: column; }
+.site-footer { margin-top: auto; }
+a { color: #FFC60B; }
+a:hover { color: #D9A500; }
+html { scroll-behavior: smooth; overflow-x: clip; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Header ---------- */
+header.site-header {
+  background: #fff;
+  border-bottom: 1px solid #E0E0E0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.2s ease;
+}
+header.site-header.is-scrolled {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+/* Each section's own top padding differs, so scroll-margin-top is sized
+   per-section to land at the same visual gap below the sticky header. */
+#services, #about, #contact {
+  scroll-margin-top: 16px;
+}
+#work {
+  scroll-margin-top: 96px;
+}
+header.site-header .wrap {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-link { display: flex; align-items: center; text-decoration: none; }
+.logo-link img { height: 50px; width: auto; }
+.main-nav { display: flex; align-items: center; gap: 32px; }
+.main-nav a.nav-link { color: #4A4A4A; text-decoration: none; font-size: 14px; font-weight: 500; }
+.btn-book { background: #FFC60B; color: #0D0D0D; padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; }
+
+/* ---------- Hero ---------- */
+#home {
+  position: relative;
+  overflow: hidden;
+  background: #0D0D0D;
+}
+#home .wrap {
+  padding: 96px 24px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+.hero-copy { flex: 1; min-width: 280px; }
+.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FFC60B; margin-bottom: 20px; }
+.hero-copy h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; color: #fff; margin: 0 0 20px; }
+.hero-copy h1 .accent { color: #FFC60B; }
+.hero-lead { font-size: 18px; color: #9A9A9A; line-height: 1.65; margin: 0 0 36px; max-width: 480px; }
+.hero-cta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.btn-primary { background: #FFC60B; color: #0D0D0D; padding: 13px 28px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; }
+.hero-secondary-link { color: #fff; font-size: 15px; font-weight: 500; text-decoration: none; }
+#hero-img-wrap { flex-shrink: 0; margin-left: 50px; width: 480px; max-width: 42vw; }
+#hero-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 16px; }
+@media (max-width: 640px) {
+  #hero-img-wrap { display: none; }
+  .work-grid { grid-template-columns: 1fr !important; }
+  #home .wrap { padding: 56px 24px; }
+  #services .wrap { padding: 0; }
+  #about .wrap { padding: 0; }
+  .about-grid { flex-direction: column; gap: 28px; }
+  .about-photo { width: 100%; }
+  .about-photo img { aspect-ratio: 4/3; }
+}
+
+/* ---------- Mobile header/nav ---------- */
+@media (max-width: 640px) {
+  header.site-header .wrap { padding: 0 16px; }
+  .logo-link img { height: 36px; }
+  .main-nav { gap: 18px; }
+  .main-nav a.nav-link { font-size: 13px; }
+  .btn-book { display: none; }
+}
+
+/* ---------- Services ---------- */
+#services { background: #F8F8F8; padding: 80px 24px; }
+.section-head { text-align: center; margin-bottom: 48px; }
+.section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FFC60B; margin-bottom: 12px; }
+.section-head h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #0D0D0D; margin: 0; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+.service-card { background: #fff; border-radius: 10px; padding: 28px 28px 32px; border: 1px solid #E0E0E0; }
+.service-card img.service-logo { height: 28px; width: auto; margin-bottom: 16px; display: block; }
+.service-logo-row { display: flex; align-items: center; gap: 10px; height: 28px; margin-bottom: 16px; }
+.service-logo-row img { height: 24px; width: 24px; display: block; }
+.ga-label { font-size: 17px; font-weight: 700; color: #0D0D0D; white-space: nowrap; }
+.service-card h3 { font-size: 18px; font-weight: 700; color: #0D0D0D; margin: 0 0 10px; line-height: 1.3; }
+.service-card p { font-size: 14px; color: #727272; line-height: 1.6; margin: 0 0 18px; }
+.service-card ul { list-style: none; margin: 0; padding: 0; }
+.service-card li { font-size: 13px; color: #4A4A4A; line-height: 1.6; display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.service-card li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #FFC60B; flex-shrink: 0; }
+
+/* ---------- CTA banner ---------- */
+.cta-banner { background: #FFC60B; padding: 64px 24px; text-align: center; }
+.cta-banner .wrap { max-width: 640px; }
+.cta-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0D0D0D; margin-bottom: 14px; opacity: 0.6; }
+.cta-banner h2 { font-size: 2rem; font-weight: 900; color: #0D0D0D; margin: 0 0 16px; letter-spacing: -0.02em; line-height: 1.15; }
+.cta-banner p { font-size: 15px; color: #4A4A4A; margin: 0 0 28px; line-height: 1.65; }
+.btn-dark { background: #0D0D0D; color: #fff; padding: 13px 32px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-block; }
+
+/* ---------- About ---------- */
+#about { background: #fff; padding: 80px 24px; }
+.about-grid { display: flex; align-items: center; gap: 56px; flex-wrap: wrap; }
+.about-photo { flex-shrink: 0; width: 400px; max-width: 100%; }
+.about-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 8px; display: block; }
+.about-copy { flex: 1; min-width: 280px; }
+.about-copy .section-eyebrow { margin-bottom: 14px; }
+.about-copy h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #0D0D0D; margin: 0 0 20px; }
+.about-copy .lead { font-size: 15px; color: #4A4A4A; line-height: 1.7; margin: 0 0 28px; max-width: 560px; }
+.about-stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.about-stat-num { font-size: 28px; font-weight: 800; color: #0D0D0D; }
+.about-stat-label { font-size: 13px; color: #727272; }
+
+/* ---------- Apps page ---------- */
+/* Same layout at every width, by design (no separate desktop treatment) */
+#apps-hero { background: #F8F8F8; padding: 64px 24px 40px; }
+#apps-hero .wrap { padding: 0; }
+#apps-hero .section-head { text-align: center; margin-bottom: 0; }
+#apps-hero h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #0D0D0D; margin: 0 0 12px; }
+#apps-hero .lead { font-size: 15px; color: #727272; max-width: 520px; margin: 0 auto; line-height: 1.65; }
+#apps-list { background: #F8F8F8; padding: 0 24px 80px; }
+#apps-list .wrap { max-width: 720px; padding: 0; }
+.app-grid { display: flex; flex-direction: column; gap: 20px; }
+.app-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E0E0E0; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.app-card-icon { display: none; }
+.app-card-title-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.app-card-title-row svg.icon-mobile { display: block; width: 24px; height: 24px; flex-shrink: 0; }
+.app-card-body { padding: 20px; }
+.app-card-badges { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.app-card-body h3 { font-size: 20px; font-weight: 700; color: #0D0D0D; margin: 0 0 8px; }
+.app-card-title-row h3 { line-height: 1; margin: 0; }
+.app-card-body p { font-size: 14px; color: #727272; line-height: 1.65; margin: 0; }
+.badge { display: inline-block; background: #F8F8F8; color: #4A4A4A; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; }
+.badge-outline { background: transparent; border: 1px solid #0D0D0D; color: #0D0D0D; padding: 3px 9px; }
+
+/* ---------- Contact ---------- */
+#contact { background: #F8F8F8; padding: 80px 24px; }
+#contact .wrap { max-width: 720px; }
+#contact .section-head { text-align: left; margin-bottom: 10px; }
+#contact .section-eyebrow { margin-bottom: 14px; }
+#contact h2 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 10px; }
+#contact .lead { font-size: 15px; color: #727272; margin: 0 0 40px; line-height: 1.65; }
+
+.form-panel, .success-panel { background: #fff; border-radius: 12px; border: 1px solid #E0E0E0; }
+.form-panel { padding: 36px; }
+.success-panel { padding: 48px; text-align: center; display: none; }
+.success-panel.visible { display: block; }
+.form-panel.hidden { display: none; }
+.success-check { font-size: 40px; margin-bottom: 16px; color: #FFC60B; }
+.success-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 12px; font-weight: 600; color: #0D0D0D; }
+.field input, .field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #E0E0E0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #0D0D0D;
+  background: #fff;
+  outline: none;
+}
+.field textarea { resize: vertical; }
+.form-actions { margin-top: 24px; }
+.btn-submit {
+  background: #FFC60B;
+  color: #0D0D0D;
+  padding: 13px 32px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-submit:disabled { opacity: 0.6; cursor: default; }
+.form-error { margin-top: 12px; font-size: 13px; color: #C0392B; display: none; }
+.hp-field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.form-error.visible { display: block; }
+
+/* ---------- Footer ---------- */
+footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; }
+.footer-top { display: flex; gap: 64px; margin-bottom: 48px; flex-wrap: wrap; }
+.footer-about { width: 220px; flex-shrink: 0; }
+.footer-about img { height: 28px; filter: brightness(0) invert(1); margin-bottom: 16px; }
+.footer-about p { font-size: 13px; color: #727272; line-height: 1.65; margin: 0; }
+.footer-cols { display: flex; gap: 48px; flex: 1; flex-wrap: wrap; }
+.footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFC60B; margin-bottom: 14px; }
+.footer-col a { display: block; font-size: 13px; color: #9A9A9A; text-decoration: none; margin-bottom: 9px; }
+.footer-bottom { border-top: 1px solid #1E1E1E; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-bottom span { font-size: 12px; color: #4A4A4A; }
+
+/* ---------- Mobile contact form ---------- */
+@media (max-width: 640px) {
+  #contact .wrap { padding: 0; }
+  .form-panel { padding: 20px; }
+  .form-grid { grid-template-columns: 1fr; gap: 16px; }
+  .field input, .field textarea { font-size: 16px; }
+}
