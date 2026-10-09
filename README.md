@@ -8,20 +8,20 @@ no CMS. Copy and images are edited directly in the files below.
 ```
 index.html            ← the whole site (header, hero, services, CTA, contact form, footer)
 css/style.css          ← styles + self-hosted Poppins @font-face declarations
-js/site.js              ← footer year + the Klaviyo contact-form submission
+js/site.js              ← footer year + the contact-form submission
 fonts/                  ← self-hosted Poppins woff2 files (no Google Fonts dependency)
 images/cruxy-logo.svg, cruxy-mark.svg   ← brand logo (header/footer) and favicon mark
 images/hero-photo-PLACEHOLDER.jpg        ← swap this for a real hero photo
 images/logos/                            ← Shopify / Klaviyo / Google Analytics logos shown in the services section
 ```
 
-## Contact form → Klaviyo
+## Contact form → email
 
-The form in `#contact` posts directly to Klaviyo's public client API
-(`https://a.klaviyo.com/client/subscriptions/`) with the public company/list keys hardcoded in
-`js/site.js` (`KLAVIYO_PUBLIC_KEY`, `KLAVIYO_LIST_ID` — safe to expose, this is Klaviyo's
-public/client-side key, not a private key). It captures two custom profile properties, `Store URL`
-and `Goals`, and swaps the form for a "Thanks! We'll be in touch soon." confirmation on success.
+The form in `#contact` posts to the `agency-contact-form` Supabase edge function (source in the
+`cruxy-time-tracker` repo, `supabase/functions/agency-contact-form`), which emails the submission to
+Cory through Resend. Replies go straight to the visitor (reply-to). Nothing is sent to Klaviyo. The
+function only accepts requests from cruxydigital.com, this project's Vercel previews and localhost.
+On success the form is swapped for a "Thanks! We'll be in touch soon." confirmation.
 
 ## Hosting — Vercel
 

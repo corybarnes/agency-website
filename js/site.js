@@ -1,10 +1,10 @@
-// Cruxy site-wide script: footer year, Klaviyo contact form (home page only), sticky header shadow.
+// Cruxy site-wide script: footer year, contact form (home page only), sticky header shadow.
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const KLAVIYO_PUBLIC_KEY = 'SKasJK';
-const KLAVIYO_LIST_ID = 'YfTN2r';
+// The form emails Cory through this function (email only, nothing is stored elsewhere).
+const CONTACT_ENDPOINT = 'https://iztknzqbkouknleqjyug.supabase.co/functions/v1/agency-contact-form';
 
 // Bot protection: a hidden honeypot field (real visitors never see or fill it,
 // since it's off-screen via CSS) plus a minimum-time check (scripted bots
@@ -46,7 +46,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   // Bot check: honeypot filled in, or submitted too fast to be a real person.
-  // Show the normal success state without actually sending anything to Klaviyo.
+  // Show the normal success state without actually sending anything.
   if (honeypot.value || (Date.now() - formLoadedAt) < MIN_SUBMIT_MS) {
     formPanel.classList.add('hidden');
     successPanel.classList.add('visible');
@@ -68,28 +68,10 @@ form.addEventListener('submit', async (e) => {
   setSubmitting(true);
 
   try {
-    const res = await fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_PUBLIC_KEY}`, {
+    const res = await fetch(CONTACT_ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
-      body: JSON.stringify({
-        data: {
-          type: 'subscription',
-          attributes: {
-            profile: {
-              data: {
-                type: 'profile',
-                attributes: {
-                  email,
-                  first_name: firstName,
-                  last_name: lastName,
-                  properties: { 'Store URL': storeUrl, 'Goals': goals },
-                },
-              },
-            },
-          },
-          relationships: { list: { data: { type: 'list', id: KLAVIYO_LIST_ID } } },
-        },
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName, lastName, email, storeUrl, goals }),
     });
 
     if (!res.ok) throw new Error('Submission failed');
