@@ -1,4 +1,4 @@
-# Cruxy website
+# Cruxy Digital website
 
 A single-page, no-build static site (HTML + CSS + vanilla JS). No framework, no npm install,
 no CMS. Copy and images are edited directly in the files below.
@@ -23,19 +23,7 @@ The form in `#contact` posts directly to Klaviyo's public client API
 public/client-side key, not a private key). It captures two custom profile properties, `Store URL`
 and `Goals`, and swaps the form for a "Thanks! We'll be in touch soon." confirmation on success.
 
-## Hosting — GitHub Pages
+## Hosting — Vercel
 
-This repo is already set up for GitHub Pages: **Settings → Pages → Source → Deploy from a
-branch → `main` / `(root)`**. Any push to `main` redeploys automatically within a minute or two.
-
-## Local preview
-
-```
-python3 -m http.server 8000
-```
-then open `http://localhost:8000`.
-
-## Still placeholder
-
-- `images/hero-photo-PLACEHOLDER.jpg` — replace with a real photo (same filename, or update the
-  `<img src>` in the hero section of `index.html`).
+Deployed on Vercel (project `agency-website`), connected to this repo. A push to a branch gets a
+preview URL; a push to `main` publishes to production. The production domain is cruxydigital.com.
