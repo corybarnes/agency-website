@@ -43,6 +43,7 @@ header.site-header {
   top: 0;
   z-index: 100;
   transition: box-shadow 0.2s ease;
+  padding: 0 24px; /* same section gutter as the content below */
 }
 header.site-header.is-scrolled {
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -62,7 +63,7 @@ header.site-header .wrap {
   justify-content: space-between;
 }
 .logo-link { display: flex; align-items: center; text-decoration: none; }
-.logo-link img { height: 50px; width: auto; }
+.logo-link img { height: 50px; width: auto; margin-left: -9px; } /* cancels the logo file's built-in left padding so the mark lines up with the content edge */
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav a.nav-link { color: #4A4A4A; text-decoration: none; font-size: 14px; font-weight: 500; }
 .btn-book { background: #FFC60B; color: #0D0D0D; padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; }
@@ -71,29 +72,29 @@ header.site-header .wrap {
 #home {
   position: relative;
   overflow: hidden;
-  background: #0D0D0D;
+  background: #74BF43 url('../images/hero-bg.png') center / cover no-repeat;
+  padding: 0 24px; /* matches the section gutter used by #services, #about, etc. */
 }
 #home .wrap {
-  padding: 96px 24px;
+  padding: 128px 24px;
   display: flex;
   align-items: center;
   gap: 64px;
   flex-wrap: wrap;
 }
 .hero-copy { flex: 1; min-width: 280px; }
-.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FFC60B; margin-bottom: 20px; }
-.hero-copy h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; color: #fff; margin: 0 0 20px; }
-.hero-copy h1 .accent { color: #FFC60B; }
-.hero-lead { font-size: 18px; color: #9A9A9A; line-height: 1.65; margin: 0 0 36px; max-width: 480px; }
+.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0D0D0D; margin-bottom: 20px; }
+.hero-copy h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; color: #0D0D0D; margin: 0 0 20px; }
+.hero-copy h1 .accent { color: #fff; }
+.hero-lead { font-size: 18px; color: rgba(13, 13, 13, 0.82); line-height: 1.65; margin: 0 0 36px; max-width: 480px; }
 .hero-cta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+#home .btn-primary { background: #0D0D0D; color: #fff; }
 .btn-primary { background: #FFC60B; color: #0D0D0D; padding: 13px 28px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; }
-.hero-secondary-link { color: #fff; font-size: 15px; font-weight: 500; text-decoration: none; }
-#hero-img-wrap { flex-shrink: 0; margin-left: 50px; width: 480px; max-width: 42vw; }
-#hero-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 16px; }
+.hero-secondary-link { color: #0D0D0D; font-size: 15px; font-weight: 500; text-decoration: none; }
 @media (max-width: 640px) {
-  #hero-img-wrap { display: none; }
   .work-grid { grid-template-columns: 1fr !important; }
-  #home .wrap { padding: 56px 24px; }
+  #home { padding: 0; }
+  #home .wrap { padding: 80px 24px; }
   #services .wrap { padding: 0; }
   #about .wrap { padding: 0; }
   .about-grid { flex-direction: column; gap: 28px; }
@@ -103,8 +104,8 @@ header.site-header .wrap {
 
 /* ---------- Mobile header/nav ---------- */
 @media (max-width: 640px) {
-  header.site-header .wrap { padding: 0 16px; }
-  .logo-link img { height: 36px; }
+  header.site-header .wrap { padding: 0; }
+  .logo-link img { height: 36px; margin-left: -7px; }
   .main-nav { gap: 18px; }
   .main-nav a.nav-link { font-size: 13px; }
   .btn-book { display: none; }
@@ -233,7 +234,7 @@ header.site-header .wrap {
 footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; }
 .footer-top { display: flex; gap: 64px; margin-bottom: 48px; flex-wrap: wrap; }
 .footer-about { width: 220px; flex-shrink: 0; }
-.footer-about img { height: 28px; filter: brightness(0) invert(1); margin-bottom: 16px; }
+.footer-about img { height: 32px; width: auto; margin-bottom: 16px; }
 .footer-about p { font-size: 13px; color: #727272; line-height: 1.65; margin: 0; }
 .footer-cols { display: flex; gap: 48px; flex: 1; flex-wrap: wrap; }
 .footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFC60B; margin-bottom: 14px; }
