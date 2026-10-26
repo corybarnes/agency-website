@@ -233,7 +233,7 @@ header.site-header .wrap {
 footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; }
 .footer-top { display: flex; gap: 64px; margin-bottom: 48px; flex-wrap: wrap; }
 .footer-about { width: 220px; flex-shrink: 0; }
-.footer-about img { height: 28px; filter: brightness(0) invert(1); margin-bottom: 16px; }
+.footer-about img { height: 32px; width: auto; margin-bottom: 16px; }
 .footer-about p { font-size: 13px; color: #727272; line-height: 1.65; margin: 0; }
 .footer-cols { display: flex; gap: 48px; flex: 1; flex-wrap: wrap; }
 .footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFC60B; margin-bottom: 14px; }
